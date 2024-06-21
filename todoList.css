@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Patrick Hand", cursive;
+}
+.container {
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, rgba(255, 10, 10, 0.9), blue);
+}
+.todoList {
+  max-width: 540px;
+  width: 100%;
+  margin-bottom: 300px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.todoList h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 16px;
+}
+.todoList h2 img {
+  width: 20px;
+  margin-left: 10px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aquamarine;
+  height: 45px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.search input {
+  border: none;
+  outline: none;
+  padding: 30px;
+  flex: 1;
+  letter-spacing: 1px;
+  font-weight: 16px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+button {
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 16px 50px;
+  background-color: orangered;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+ul {
+  margin-left: 40px;
+}
+ul li {
+  list-style: none;
+  margin: 20px 30px;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 1px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -40px;
+  width: 20px;
+  height: 20px;
+  background: url(./Image/circle.png);
+  background-position: center;
+  background-size: cover;
+}
+ul li.checked {
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background: url(./Image/mark.png);
+  background-position: center;
+  background-size: cover;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: -9px;
+  color: rgb(66, 63, 63);
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+@media screen and(max-width:500px) {
+  .todoList {
+    margin: auto;
+  }
+  .search input {
+    width: 200px;
+  }
+}
